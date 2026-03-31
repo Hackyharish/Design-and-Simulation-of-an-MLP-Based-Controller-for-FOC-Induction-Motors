@@ -1,5 +1,7 @@
 # Design and Simulation of an MLP-Based Controller for FOC Induction Motors
 
+![Project Banner Placeholder](Images/banner_placeholder.png)
+
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
 ![MATLAB](https://img.shields.io/badge/MATLAB-E16109?style=for-the-badge&logo=mathworks&logoColor=white)
@@ -86,7 +88,8 @@ This project proposes a **hybrid deep learning-based voltage reference generator
 └──────────────────────────────────────────────────────────────────┘
 ```
 
-![System Architecture](Images/fig1_architecture.png)
+#### System Architecture Diagram
+![System Architecture](Images/EDC_BLOCK_diagram_page.jpg)
 
 ---
 
@@ -133,8 +136,11 @@ The six-dimensional input feature vector is constructed as follows:
 | **Epochs** | 1500 |
 | **Learning Rate** | 0.001 (fixed) |
 
-![Training Loss Convergence](Images/fig3_training_loss.png)
-![Vqs Tracking](Images/fig4_vqs_tracking.png)
+#### Training Loss Convergence
+![Training Loss Convergence](Images/Training.png)
+
+#### Vqs Tracking Performance
+![Vqs Tracking](Images/Tracking.png)
 
 ---
 
@@ -167,7 +173,8 @@ The pure neural network is extended with three deterministic guardrails for robu
 **Problem**: Inverter DC-link voltage limits (Vmax = 2.5 p.u.) are physical hard constraints.  
 **Solution**: Dynamic voltage budget allocation ensuring the voltage vector never exceeds inverter capabilities.
 
-![Simscape Hybrid DL Controller](Images/fig5_simscape_implementation.png)
+#### Simscape Model Implementation
+![Simscape Hybrid DL Controller](Images/ML_simulink.png)
 
 ---
 
@@ -201,18 +208,38 @@ The pure neural network is extended with three deterministic guardrails for robu
 **Key Insight**: Maximum benefit at rated speed (1500 RPM) where training data density is highest.
 
 ### Fixed-Speed Tests (1000 RPM Operating Point)
-![PI Speed Response at 1000 RPM](Images/fig6_speed_response_pi_1000rpm.png)
-![DL Speed Response at 1000 RPM](Images/fig7_speed_response_dl_1000rpm.png)
-![Torque Ripple - DL Controller](Images/fig8_torque_ripple_dl_1000rpm.png)
-![Stator Current THD - DL Controller](Images/fig9_stator_current_dl_1000rpm.png)
+
+#### PI Controller Speed Response
+![PI Speed Response at 1000 RPM](Images/FOC_1000_rpm_speed.png)
+
+#### DL Controller Speed Response
+![DL Speed Response at 1000 RPM](Images/ML_1000_rpm_speed.png)
+
+#### DL Controller Torque Ripple
+![Torque Ripple - DL Controller](Images/ML_1000_rpm_torque.png)
+
+#### DL Controller Stator Current
+![Stator Current THD - DL Controller](Images/ML_1000_rpm_current.png)
 
 ### Variable-Speed Tests (500 → 1000 → 1500 RPM)
-![PI Variable Speed Tracking](Images/fig10_speed_variable_pi.png)
-![PI Variable Torque Response](Images/fig11_torque_variable_pi.png)
-![PI Stator Current Waveform](Images/fig12_current_waveform_pi.png)
-![DL Variable Speed Tracking](Images/fig13_speed_variable_dl.png)
-![DL Variable Torque Response](Images/fig14_torque_variable_dl.png)
-![DL Stator Current Waveform](Images/fig15_current_waveform_dl.png)
+
+#### PI Controller Variable Speed Tracking
+![PI Variable Speed Tracking](Images/Foc_var_speed_plot.png)
+
+#### PI Controller Variable Torque Response
+![PI Variable Torque Response](Images/Foc_var_speed_torque.png)
+
+#### PI Controller Stator Current Waveform
+![PI Stator Current Waveform](Images/FOC_var_speed_current.png)
+
+#### DL Controller Variable Speed Tracking
+![DL Variable Speed Tracking](Images/ML_var_speed_plot.png)
+
+#### DL Controller Variable Torque Response
+![DL Variable Torque Response](Images/ML_var_speed_torque.png)
+
+#### DL Controller Stator Current Waveform
+![DL Stator Current Waveform](Images/ML_var_speed_current.png)
 
 ---
 
