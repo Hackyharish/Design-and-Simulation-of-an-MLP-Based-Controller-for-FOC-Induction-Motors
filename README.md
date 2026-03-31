@@ -308,7 +308,7 @@ If you wish to retrain the model or visualize the training process:
 [**Harish R**](https://www.linkedin.com/in/harish-r-work/)  
 Department of Electrical and Electronics Engineering, Amrita Vishwa Vidyapeetham
 
-[**Harshaa V**]()  
+[**Harshaa V**](https://www.linkedin.com/in/harshaa-v/)  
 Department of Electrical and Electronics Engineering, Amrita Vishwa Vidyapeetham
 
 [**Karthik K**](https://www.linkedin.com/in/karthik-krishnamurthi/)  
